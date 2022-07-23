@@ -4,11 +4,13 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 
 function Header () {
+  const screenWidth = window.screen.width;
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ background: '#2E3B55' }}>
+      <AppBar position="static" style={{ background: '#FFF', color: 'black' }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -19,8 +21,27 @@ function Header () {
           >
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            React Typist App
+            React Typist APP
           </Typography>
+          { screenWidth < 1440
+           ? <MenuIcon /> :
+            <>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Quem Somos
+              </Typography>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Transparência
+              </Typography>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Notícias
+              </Typography>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Trabalhe conosco
+              </Typography>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              Quero doar
+              </Typography>
+            </>}
         </Toolbar>
       </AppBar>
     </Box>
