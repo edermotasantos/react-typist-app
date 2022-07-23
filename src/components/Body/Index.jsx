@@ -4,15 +4,15 @@ import Typical from 'react-typical';
 function Body () {
   return (
     <p>
-      O uso inteligente de dados para transformar a saúde pública
+      O uso inteligente de dados para transformar
       <Typical
         loop={Infinity}
         steps={[
-          'da Júlia',
+          'a saúde da Júlia.',
           1000,
-          'do Antonio',
+          'a saúde do Antonio.',
           1000,
-          'do Brasil',
+          'a saúde do Brasil.',
           1000,
         ]}
       />
