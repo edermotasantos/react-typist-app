@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -7,7 +7,12 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 function Header () {
-  const screenWidth = window.screen.width;
+  const screenWidth = () => window.screen.width;
+
+  useEffect(() => {
+    screenWidth();
+  }, []);
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" style={{ background: '#FFF', color: 'black' }}>
@@ -23,7 +28,7 @@ function Header () {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             React Typist APP
           </Typography>
-          { screenWidth < 1440
+          { screenWidth() < 1440
            ? <MenuIcon /> :
             <>
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
