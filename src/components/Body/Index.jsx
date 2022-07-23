@@ -1,6 +1,12 @@
 import React from "react";
 import Typical from 'react-typical';
-import Typography from '@mui/material/Typography'; 
+import Typography from '@mui/material/Typography';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
+
+const theme = createTheme();
 
 const typing = () => {
   return (
@@ -20,9 +26,25 @@ const typing = () => {
 
 function Body () {
   return (
-    <Typography variant="h1" component="h2" mt={1}>
-      {typing()}
-    </Typography>
+    <ThemeProvider theme={theme}>
+      <Container component="main" maxWidth='70%'>
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: '0.5rem',
+            mx: '0.3125rem',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            maxWidth: '70%'
+          }}
+        >
+          <Typography component="h1" fontSize="520%">
+            {typing()}
+          </Typography>
+        </Box>
+      </Container>
+    </ThemeProvider>
   );
 };
 
