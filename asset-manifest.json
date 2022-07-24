@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-typist-app/static/css/main.4e95b57d.css",
+    "main.js": "/react-typist-app/static/js/main.a29919be.js",
+    "static/js/787.5e7e15a8.chunk.js": "/react-typist-app/static/js/787.5e7e15a8.chunk.js",
+    "index.html": "/react-typist-app/index.html",
+    "main.4e95b57d.css.map": "/react-typist-app/static/css/main.4e95b57d.css.map",
+    "main.a29919be.js.map": "/react-typist-app/static/js/main.a29919be.js.map",
+    "787.5e7e15a8.chunk.js.map": "/react-typist-app/static/js/787.5e7e15a8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e95b57d.css",
+    "static/js/main.a29919be.js"
+  ]
+}
