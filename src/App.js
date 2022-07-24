@@ -6,7 +6,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Main />} />
+        <Route path="react-typist-app" element={<Main />} />
       </Routes>
     </BrowserRouter>
   );
